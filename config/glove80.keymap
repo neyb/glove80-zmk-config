@@ -102,7 +102,7 @@
         combo_layers_num {
             key-positions = <POS_LH_T2 POS_RH_T2>;
             bindings = <&mo LAYER_Mouse_Num>;
-            timeout-ms = 100;
+            timeout-ms = <100>;
             slow-release;
         };
     };
