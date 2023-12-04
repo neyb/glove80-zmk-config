@@ -102,6 +102,7 @@
         combo_layers_num {
             key-positions = <POS_LH_T2 POS_RH_T2>;
             bindings = <&mo LAYER_Mouse_Num>;
+            timeout-ms = 100;
             slow-release;
         };
     };
@@ -261,56 +262,56 @@
 
         layer_Base {
             bindings = <
-&kp F1    &kp F2  &kp F3    &kp F4     &kp F5                                                                                                        &kp F6     &kp F7     &kp F8    &kp F9    &kp F10
-&kp GRAVE    &kp N1  &kp N2    &kp N3     &kp N4  &kp N5                                                                                      &kp N6    &kp N7     &kp N8     &kp N9    &kp N0  &kp MINUS
-&kp TAB     &kp Q   &kp W     &kp E      &kp R   &kp T                                                                                       &kp Y     &kp U      &kp I      &kp O     &kp P   &kp LBKT
-&kp ESC     &kp A   &kp S     &kp D      &kp F   &kp G                                                                                       &kp H     &kp J      &kp K      &kp L  &kp SEMI    &kp SQT
-&kp EQUAL     &kp Z   &kp X     &kp C      &kp V   &kp B  &kp LSHFT  &lthold 2 LGUI     &mt LGUI DEL               &mo 3  &kp DEL   &kp BSPC   &kp N     &kp M  &kp COMMA    &kp DOT  &kp FSLH   &kp RBKT
-&magic 4 0  &kp LEFT  &kp UP  &kp DOWN  &kp RIGHT          &kp LCTRL  &mt LALT SPACE  &lthold 3 ENTER  &mt RALT RA(SPACE)  &kp RET  &kp SPACE          &kp HOME  &kp PG_UP  &kp PG_DN   &kp END   &kp BSLH
+&kp F1       &kp F2     &kp F3   &kp F4     &kp F5                                                                                                                       &kp F6     &kp F7      &kp F8      &kp F9     &kp F10
+&kp GRAVE    &kp N1     &kp N2   &kp N3     &kp N4      &kp N5                                                                                                   &kp N6  &kp N7     &kp N8      &kp N9      &kp N0     &kp MINUS
+&kp TAB      &kp Q      &kp W    &kp E      &kp R       &kp T                                                                                                    &kp Y   &kp U      &kp I       &kp O       &kp P      &kp LBKT
+&kp ESC      &kp A      &kp S    &kp D      &kp F       &kp G                                                                                                    &kp H   &kp J      &kp K       &kp L       &kp SEMI   &kp SQT
+&kp EQUAL    &kp Z      &kp X    &kp C      &kp V       &kp B    &kp LSHFT   &lthold 2 LGUI   &mt LGUI DEL            &mo 3                &kp DEL   &kp BSPC    &kp N   &kp M      &kp COMMA   &kp DOT     &kp FSLH   &kp RBKT
+&magic 4 0   &kp LEFT   &kp UP   &kp DOWN   &kp RIGHT            &kp LCTRL   &mt LALT SPACE   &lthold 3 ENTER         &mt RALT RA(SPACE)   &kp RET   &kp SPACE           &kp HOME   &kp PG_UP   &kp PG_DN   &kp END    &kp BSLH
 >;
         };
 
         layer_Game {
             bindings = <
-&trans     &trans  &trans  &trans  &trans                                                                                &trans  &trans  &trans  &trans  &trans
-&trans     &trans  &trans  &trans  &trans  &trans                                                                &trans  &trans  &trans  &trans  &trans  &trans
-&kp ESC    &kp TAB   &kp Q   &kp W   &kp E   &kp R                                                                &trans  &trans  &trans  &trans  &trans  &trans
-&kp T  &kp LSHFT   &kp A   &kp S   &kp D   &kp F                                                                &trans  &trans  &trans  &trans  &trans  &trans
-&kp RCTRL  &kp LCTRL   &kp Z   &kp X   &kp C   &kp V      &kp G     &kp B         &kp LGUI  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans     &trans  &trans  &trans  &trans          &kp SPACE  &kp LALT  &lthold 2 LG(N)  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans      &trans      &trans   &trans   &trans                                                                                                &trans   &trans   &trans   &trans   &trans
+&trans      &trans      &trans   &trans   &trans   &trans                                                                             &trans    &trans   &trans   &trans   &trans   &trans
+&kp ESC     &kp TAB     &kp Q    &kp W    &kp E    &kp R                                                                              &trans    &trans   &trans   &trans   &trans   &trans
+&kp T       &kp LSHFT   &kp A    &kp S    &kp D    &kp F                                                                              &trans    &trans   &trans   &trans   &trans   &trans
+&kp RCTRL   &kp LCTRL   &kp Z    &kp X    &kp C    &kp V    &kp G       &kp B      &kp LGUI                &trans   &trans   &trans   &trans    &trans   &trans   &trans   &trans   &trans
+&trans      &trans      &trans   &trans   &trans            &kp SPACE   &kp LALT   &lthold 2 LG(N)         &trans   &trans   &trans             &trans   &trans   &trans   &trans   &trans
 >;
         };
 
         layer_Lower {
             bindings = <
-&kp C_BRI_DN   &kp C_BRI_UP  &kp C_PREV    &kp C_NEXT         &kp C_PP                                                                                      &kp C_MUTE   &kp C_VOL_DN   &kp C_VOL_UP      &kp F11  &kp F12
-&none         &tog 1       &none         &none  &kp PAUSE_BREAK    &kp INS                                                               &kp CAPS    &kp KP_NUM       &kp SLCK          &none        &none    &none
-&none      &kp MINUS      &kp N6        &kp N2           &kp N5      &none                                                                  &none     &kp EQUAL  &kp LS(EQUAL)         &kp N9   &kp RA(N9)    &none
-&kp PSCRN     &kp RA(N3)  &kp RA(N4)        &kp N3           &kp N4  &kp LS(G)                                                                  &none        &kp N7         &kp N8     &kp RA(N7)   &kp RA(N8)    &none
-&none  &kp LS(GRAVE)   &kp GRAVE  &kp RA(V)        &kp LS(V)      &none  &trans  &trans  &kp LCTRL  &kp K_APP         &trans  &trans     &none     &kp LS(O)          &kp O      &kp RA(O)       &kp N0    &none
-&trans   &kp LG(LEFT)  &kp LG(UP)  &kp LG(DOWN)    &kp LG(RIGHT)             &trans  &trans     &trans     &trans  &kp RA(SPACE)  &trans            &kp LG(HOME)  &kp LG(PG_UP)  &kp LG(PG_DN)  &kp LG(END)    &none
+&kp C_BRI_DN   &kp C_BRI_UP    &kp C_PREV   &kp C_NEXT     &kp C_PP                                                                                                             &kp C_MUTE     &kp C_VOL_DN    &kp C_VOL_UP    &kp F11      &kp F12
+&none          &tog 1          &none        &none          &kp PAUSE_BREAK   &kp INS                                                                               &kp CAPS     &kp KP_NUM     &kp SLCK        &none           &none        &none
+&none          &kp MINUS       &kp N6       &kp N2         &kp N5            &none                                                                                 &none        &kp EQUAL      &kp LS(EQUAL)   &kp N9          &kp RA(N9)   &none
+&kp PSCRN      &kp RA(N3)      &kp RA(N4)   &kp N3         &kp N4            &kp LS(G)                                                                             &none        &kp N7         &kp N8          &kp RA(N7)      &kp RA(N8)   &none
+&none          &kp LS(GRAVE)   &kp GRAVE    &kp RA(V)      &kp LS(V)         &none       &trans   &trans   &kp LCTRL         &kp K_APP   &trans         &trans     &none        &kp LS(O)      &kp O           &kp RA(O)       &kp N0       &none
+&trans         &kp LG(LEFT)    &kp LG(UP)   &kp LG(DOWN)   &kp LG(RIGHT)                 &trans   &trans   &trans            &trans      &kp RA(SPACE)  &trans                  &kp LG(HOME)   &kp LG(PG_UP)   &kp LG(PG_DN)   &kp LG(END)  &none
 >;
         };
 
         layer_Mouse_Num {
             bindings = <
-&trans     &trans        &trans     &trans     &trans                                                                                  &trans     &trans     &trans        &trans        &trans
-&none      &none         &none      &none      &none   &none                                                                &none      &none      &none      &none         &none         &none
-&none      &none  &kp LC(LBKT)      &none      &none   &none                                                          &kp KP_LPAR  &kp KP_N7  &kp KP_N8  &kp KP_N9   &kp KP_PLUS   &kp KP_RPAR
-&none  &kp LC(A)     &kp LC(J)      &none  &kp LC(K)   &none                                                      &kp KP_MULTIPLY  &kp KP_N4  &kp KP_N5  &kp KP_N6     &kp KP_N0  &kp KP_SLASH
-&none  &kp LC(T)   &kp LC(SQT)  &kp LC(M)  &kp LC(P)   &none  &trans  &trans  &trans  &trans  &trans      &trans     &kp KP_EQUAL  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_MINUS         &none
-&trans     &trans        &trans     &trans     &trans          &trans  &trans  &trans  &trans  &trans  &kp KP_DOT                      &trans     &trans     &trans        &trans         &none
+&trans   &trans      &trans         &trans      &trans                                                                                              &trans      &trans      &trans      &trans         &trans
+&none    &none       &none          &none       &none       &none                                                                 &none             &none       &none       &none       &none          &none
+&none    &none       &kp LC(LBKT)   &none       &none       &none                                                                 &kp KP_LPAR       &kp KP_N7   &kp KP_N8   &kp KP_N9   &kp KP_PLUS    &kp KP_RPAR
+&none    &kp LC(A)   &kp LC(J)      &none       &kp LC(K)   &none                                                                 &kp KP_MULTIPLY   &kp KP_N4   &kp KP_N5   &kp KP_N6   &kp KP_N0      &kp KP_SLASH
+&none    &kp LC(T)   &kp LC(SQT)    &kp LC(M)   &kp LC(P)   &none   &trans  &trans  &trans         &trans   &trans   &trans       &kp KP_EQUAL      &kp KP_N1   &kp KP_N2   &kp KP_N3   &kp KP_MINUS   &none
+&trans   &trans      &trans         &trans      &trans              &trans  &trans  &trans         &trans   &trans   &kp KP_DOT                     &trans      &trans      &trans      &trans         &none
 >;
         };
 
         layer_Magic {
             bindings = <
-&bt BT_CLR            &none            &none            &none            &none                                                                                  &none   &none   &none   &none  &bt BT_CLR_ALL
-&none            &none            &none            &none            &none            &none                                                         &none   &none   &none   &none   &none           &none
-&none  &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                         &none   &none   &none   &none   &none           &none
-&bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                         &none   &none   &none   &none   &none     &bootloader
-&sys_reset            &none            &none            &none            &none            &none   &bt_2   &bt_3        &trans   &none   &none   &none   &none   &none   &none   &none   &none      &sys_reset
-&none            &none            &none            &none            &none                    &bt_0   &bt_1  &out OUT_USB   &none   &none   &none           &none   &none   &none   &none           &none
+&bt BT_CLR    &none             &none             &none             &none                                                                                                    &none   &none   &none   &none   &bt BT_CLR_ALL
+&none         &none             &none             &none             &none             &none                                                                          &none   &none   &none   &none   &none   &none
+&none         &rgb_ug RGB_SPI   &rgb_ug RGB_SAI   &rgb_ug RGB_HUI   &rgb_ug RGB_BRI   &rgb_ug RGB_TOG                                                                &none   &none   &none   &none   &none   &none
+&bootloader   &rgb_ug RGB_SPD   &rgb_ug RGB_SAD   &rgb_ug RGB_HUD   &rgb_ug RGB_BRD   &rgb_ug RGB_EFF                                                                &none   &none   &none   &none   &none   &bootloader
+&sys_reset    &none             &none             &none             &none             &none             &bt_2   &bt_3   &trans               &none   &none   &none   &none   &none   &none   &none   &none   &sys_reset
+&none         &none             &none             &none             &none                               &bt_0   &bt_1   &out OUT_USB         &none   &none   &none           &none   &none   &none   &none   &none
 >;
         };
 
