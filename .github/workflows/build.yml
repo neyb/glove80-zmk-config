@@ -24,9 +24,9 @@ jobs:
       - name: Build Glove80 combined firmware
         run: nix-build config -o combined
       - name: Copy result out of nix store
-        run: cp combined/glove80.uf2 glove80.uf2
+        run: cp combined/glove80.uf2 glove80-${{ github.ref_name }}-${{ github.sha }}.uf2
       - name: Upload result
         uses: actions/upload-artifact@v3
         with:
-          name: glove80.uf2
-          path: glove80.uf2
+          name: glove80-${{ github.ref_name }}-${{ github.sha }}.uf2
+          path: glove80-${{ github.ref_name }}-${{ github.sha }}.uf2
