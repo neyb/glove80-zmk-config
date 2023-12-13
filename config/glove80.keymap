@@ -276,12 +276,12 @@
 
         layer_Lower {
             bindings = <
-&kp C_BRI_DN   &kp C_BRI_UP    &kp C_PREV   &kp C_NEXT     &kp C_PP                                                                                                             &kp C_MUTE     &kp C_VOL_DN    &kp C_VOL_UP    &kp F11      &kp F12
-&none          &tog 1          &none        &none          &kp PAUSE_BREAK   &kp INS                                                                               &kp CAPS     &kp KP_NUM     &kp SLCK        &none           &none        &none
-&none          &kp MINUS       &kp N6       &kp N2         &kp N5            &none                                                                                 &none        &kp EQUAL      &kp LS(EQUAL)   &kp N9          &kp RA(N9)   &none
-&kp PSCRN      &kp RA(N3)      &kp RA(N4)   &kp N3         &kp N4            &kp LS(G)                                                                             &none        &kp N7         &kp N8          &kp RA(N7)      &kp RA(N8)   &none
-&none          &kp LS(GRAVE)   &kp GRAVE    &kp RA(V)      &kp LS(V)         &none       &trans   &trans   &kp LCTRL         &kp K_APP   &trans         &trans     &none        &kp LS(O)      &kp O           &kp RA(O)       &kp N0       &none
-&trans         &kp LG(LEFT)    &kp LG(UP)   &kp LG(DOWN)   &kp LG(RIGHT)                 &trans   &trans   &trans            &trans      &kp RA(SPACE)  &trans                  &kp LG(HOME)   &kp LG(PG_UP)   &kp LG(PG_DN)   &kp LG(END)  &none
+&kp C_BRI_DN   &kp C_BRI_UP    &kp C_PREV     &kp C_NEXT     &kp C_PP                                                                                                             &kp C_MUTE     &kp C_VOL_DN    &kp C_VOL_UP    &kp F11      &kp F12
+&none          &tog 1          &none          &none          &kp PAUSE_BREAK   &kp INS                                                                               &kp CAPS     &kp KP_NUM     &kp SLCK        &none           &none        &none
+&none          &kp MINUS       &kp LS(RBKT)   &kp N2         &kp N5            &none                                                                                 &none        &kp EQUAL      &kp LS(EQUAL)   &kp N9          &kp RA(N9)   &none
+&kp PSCRN      &kp RA(N3)      &kp RA(N4)     &kp N3         &kp N4            &kp LS(G)                                                                             &none        &kp N7         &kp N8          &kp RA(N7)      &kp RA(N8)   &none
+&none          &kp LS(GRAVE)   &kp GRAVE      &kp LS(O)      &kp LS(V)         &none       &trans   &trans   &kp LCTRL         &kp K_APP   &trans         &trans     &none        &kp N6         &kp O           &kp RA(O)       &kp N0       &none
+&trans         &kp LG(LEFT)    &kp LG(UP)     &kp LG(DOWN)   &kp LG(RIGHT)                 &trans   &trans   &trans            &trans      &kp RA(SPACE)  &trans                  &kp LG(HOME)   &kp LG(PG_UP)   &kp LG(PG_DN)   &kp LG(END)  &none
 >;
         };
 
