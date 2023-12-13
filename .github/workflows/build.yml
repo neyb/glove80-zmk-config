@@ -5,6 +5,8 @@ on: [push, pull_request, workflow_dispatch]
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      FILENAME: glove80-${{ github.ref_name }}-${{ github.event.repository.createdAt }}-${{ github.sha }}.uf2
     steps:
       - uses: actions/checkout@v3
         with:
@@ -24,9 +26,9 @@ jobs:
       - name: Build Glove80 combined firmware
         run: nix-build config -o combined
       - name: Copy result out of nix store
-        run: cp combined/glove80.uf2 glove80-${{ github.ref_name }}-${{ github.sha }}.uf2
+        run: cp combined/glove80.uf2 ${{ env.FILENAME }}
       - name: Upload result
         uses: actions/upload-artifact@v3
         with:
-          name: glove80-${{ github.ref_name }}-${{ github.sha }}.uf2
-          path: glove80-${{ github.ref_name }}-${{ github.sha }}.uf2
+          name: ${{ env.FILENAME }}
+          path: ${{ env.FILENAME }}
