@@ -6,7 +6,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      FILENAME: glove80-${{ github.ref_name }}-${{ github.event.repository.createdAt }}-${{ github.sha }}.uf2
+      FILENAME: glove80-${{ github.ref_name }}-${{ github.event.repository.created_at }}-${{ github.sha }}.uf2
     steps:
       - uses: actions/checkout@v3
         with:
