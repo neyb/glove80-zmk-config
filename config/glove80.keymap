@@ -111,7 +111,7 @@
  #define EYOB_AT MINUS
  #define EYOB_ampersand EQUAL
 
- #define EYOB_EGRAVE Q
+ #define EYOB_EACUTE Q
  #define EYOB_Y W
  #define EYOB_O E
  #define EYOB_B R
@@ -152,6 +152,7 @@
 / {
     combos {
         compatible = "zmk,combos";
+        
         combo_layers_num {
             key-positions = <POS_LH_T2 POS_RH_T2>;
             bindings = <&mo LAYER_Num>;
@@ -305,16 +306,15 @@
     keymap {
         compatible = "zmk,keymap";
 
-
         layer_Base {
             bindings = <
-&kp F1       &kp F2     &kp F3   &kp F4     &kp F5                                                                                                                            &kp F6     &kp F7      &kp F8      &kp F9     &kp F10
-&kp GRAVE    &kp N1     &kp N2   &kp N3     &kp N4      &kp N5                                                                                                        &kp N6  &kp N7     &kp N8      &kp N9      &kp N0     &kp MINUS
-&kp TAB      &kp Q      &kp W    &kp E      &kp R       &kp T                                                                                                         &kp Y   &kp U      &kp I       &kp O       &kp P      &kp LBKT
-&kp ESC      &kp A      &kp S    &kp D      &kp F       &kp G                                                                                                         &kp H   &kp J      &kp K       &kp L       &kp SEMI   &kp SQT
-&kp EQUAL    &kp Z      &kp X    &kp C      &kp V       &kp B    &kp LSHFT   &lthold 2 LGUI   &mt LGUI DEL            &mo 3                &mt RALT DEL   &kp BSPC    &kp N   &kp M      &kp COMMA   &kp DOT     &kp FSLH   &kp RBKT
-&magic 4 0   &kp LEFT   &kp UP   &kp DOWN   &kp RIGHT            &kp LCTRL   &mt LALT SPACE   &lthold 3 ENTER         &mt RALT RA(SPACE)   &kp RET        &kp SPACE           &kp HOME   &kp PG_UP   &kp PG_DN   &kp END    &kp BSLH
->;
+                &kp F1                 &kp F2            &kp F3              &kp F4               &kp F5                                                                                                                                                                             &kp F6             &kp F7               &kp F8              &kp F9             &kp F10
+                &kp EYOB_DOLLAR        &kp EYOB_PLUS_N1  &kp EYOB_EQUAL_N2   &kp EYOB_LBRACE_N3   &kp EYOB_LPAR_N4   &kp EYOB_MINUS_N5                                                                                                                         &kp EYOB_DBQUOTE_N6   &kp EYOB_RPAR_N7   &kp EYOB_RBRACE_N8   &kp EYOB_SLASH_N9   &kp EYOB_STAR_N0   &kp EYOB_AT
+                &kp TAB                &kp EYOB_EACUTE   &kp EYOB_Y          &kp EYOB_O           &kp EYOB_B         &kp EYOB_W                                                                                                                                &kp EYOB_F            &kp EYOB_D         &kp EYOB_L           &kp EYOB_quote      &kp EYOB_V         &kp EYOB_Z
+                &kp ESC                &kp EYOB_A        &kp EYOB_I          &kp EYOB_E           &kp EYOB_U         &kp EYOB_comma                                                                                                                            &kp EYOB_P            &kp EYOB_S         &kp EYOB_T           &kp EYOB_R          &kp EYOB_N         &kp EYOB_X
+                &kp EQUAL              &kp EYOB_AGRAVE   &kp EYOB_J          &kp EYOB_EGRAVE      &kp EYOB_dot       &kp EYOB_K       &kp LSHFT   &lthold LAYER_Symbol LGUI   &mt LGUI DEL                    &mo LAYER_Num         &mt RALT DEL   &kp BSPC    &kp EYOB_G            &kp EYOB_C         &kp EYOB_M           &kp EYOB_H          &kp EYOB_Q         &kp EYOB_circumflex
+                &magic LAYER_Magic 0   &kp LEFT          &kp UP              &kp DOWN             &kp RIGHT                           &kp LCTRL   &mt LALT SPACE             &lthold LAYER_Mouse ENTER        &mt RALT RA(SPACE)    &kp RET        &kp SPACE                         &kp HOME           &kp PG_UP            &kp PG_DN           &kp END            &kp EYOB_ccedilla
+            >;
         };
 
         layer_Game {
