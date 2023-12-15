@@ -96,59 +96,59 @@
 #define POS_RH_C6R5 63
 #define POS_RH_C6R6 79
 
- /* éyob */
- #define EYOB_DOLLAR GRAVE
- #define EYOB_PLUS_N1 N1
- #define EYOB_EQUAL_N2 N2
- #define EYOB_LBRACE_N3 N3
- #define EYOB_LPAR_N4 N4
- #define EYOB_MINUS_N5 N5
- #define EYOB_DBQUOTE_N6 N6
- #define EYOB_RPAR_N7 N7
- #define EYOB_RBRACE_N8 N8
- #define EYOB_SLASH_N9 N9
- #define EYOB_STAR_N0 N0
- #define EYOB_AT MINUS
- #define EYOB_ampersand EQUAL
+/* éyob */
+#define EYOB_DOLLAR GRAVE
+#define EYOB_PLUS_N1 N1
+#define EYOB_EQUAL_N2 N2
+#define EYOB_LBRACE_N3 N3
+#define EYOB_LPAR_N4 N4
+#define EYOB_MINUS_N5 N5
+#define EYOB_DBQUOTE_N6 N6
+#define EYOB_RPAR_N7 N7
+#define EYOB_RBRACE_N8 N8
+#define EYOB_SLASH_N9 N9
+#define EYOB_STAR_N0 N0
+#define EYOB_AT MINUS
+#define EYOB_ampersand EQUAL
 
- #define EYOB_EACUTE Q
- #define EYOB_Y W
- #define EYOB_O E
- #define EYOB_B R
- #define EYOB_W T
- #define EYOB_F Y
- #define EYOB_D U
- #define EYOB_L I
- #define EYOB_quote O
- #define EYOB_V P
- #define EYOB_Z LBKT
- #define EYOB_circumflex RBKT
+#define EYOB_EACUTE Q
+#define EYOB_Y W
+#define EYOB_O E
+#define EYOB_B R
+#define EYOB_W T
+#define EYOB_F Y
+#define EYOB_D U
+#define EYOB_L I
+#define EYOB_quote O
+#define EYOB_V P
+#define EYOB_Z LBKT
+#define EYOB_circumflex RBKT
 
- #define EYOB_A A
- #define EYOB_I S
- #define EYOB_E D
- #define EYOB_U F
- #define EYOB_comma G
- #define EYOB_P H
- #define EYOB_S J
- #define EYOB_T K
- #define EYOB_R L
- #define EYOB_N SEMI
- #define EYOB_X SQT
- #define EYOB_ccedilla BSLH
+#define EYOB_A A
+#define EYOB_I S
+#define EYOB_E D
+#define EYOB_U F
+#define EYOB_comma G
+#define EYOB_P H
+#define EYOB_S J
+#define EYOB_T K
+#define EYOB_R L
+#define EYOB_N SEMI
+#define EYOB_X SQT
+#define EYOB_ccedilla BSLH
 
- #define EYOB_AGRAVE Z
- #define EYOB_J X
- #define EYOB_EGRAVE C
- #define EYOB_dot V
- #define EYOB_K B
- #define EYOB_G N
- #define EYOB_C M
- #define EYOB_M COMMA
- #define EYOB_H DOT
- #define EYOB_Q FSLH
+#define EYOB_AGRAVE Z
+#define EYOB_J X
+#define EYOB_EGRAVE C
+#define EYOB_dot V
+#define EYOB_K B
+#define EYOB_G N
+#define EYOB_C M
+#define EYOB_M COMMA
+#define EYOB_H DOT
+#define EYOB_Q FSLH
 
-/* layers */
+/* layers combos */
 / {
     combos {
         compatible = "zmk,combos";
@@ -341,12 +341,12 @@
 
         layer_Mouse {
             bindings = <
-                &trans   &trans      &trans         &trans      &trans                                                                                   &trans   &trans   &trans   &trans   &trans
-                &none    &none       &none          &none       &none       &none                                                              &trans    &trans   &trans   &trans   &trans   &trans
-                &none    &none       &kp LC(LBKT)   &none       &none       &none                                                              &trans    &trans   &trans   &trans   &trans   &trans
-                &none    &kp LC(A)   &kp LC(J)      &none       &kp LC(K)   &none                                                              &trans    &trans   &trans   &trans   &trans   &trans
-                &none    &kp LC(T)   &kp LC(SQT)    &kp LC(M)   &kp LC(P)   &none   &trans  &trans  &trans          &trans   &trans   &trans   &trans    &trans   &trans   &trans   &trans   &trans
-                &trans   &trans      &trans         &trans      &trans              &trans  &trans  &trans          &trans   &trans   &trans             &trans   &trans   &trans   &trans   &trans
+                &trans   &trans           &trans           &trans           &trans                                                                                        &trans   &trans   &trans   &trans   &trans
+                &none    &none            &none            &none            &none            &none                                                              &trans    &trans   &trans   &trans   &trans   &trans
+                &none    &none            &kp LC(EYOB_Z)   &none            &none            &none                                                              &trans    &trans   &trans   &trans   &trans   &trans
+                &none    &kp LC(EYOB_A)   &kp LC(EYOB_S)   &none            &kp LC(EYOB_T)   &none                                                              &trans    &trans   &trans   &trans   &trans   &trans
+                &none    &kp LC(EYOB_W)   &kp LC(SQT)      &kp LC(EYOB_C)   &kp LC(EYOB_V)   &none   &trans  &trans  &trans          &trans   &trans   &trans   &trans    &trans   &trans   &trans   &trans   &trans
+                &trans   &trans           &trans           &trans           &trans                   &trans  &trans  &trans          &trans   &trans   &trans             &trans   &trans   &trans   &trans   &trans
             >;
         };
 
