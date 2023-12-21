@@ -330,12 +330,12 @@
 
         layer_Symbol {
             bindings = <
-                &kp C_BRI_DN   &kp C_BRI_UP      &kp C_PREV     &kp C_NEXT     &kp C_PP                                                                                                             &kp C_MUTE     &kp C_VOL_DN    &kp C_VOL_UP    &kp F11      &kp F12
-                &none          &tog LAYER_Game   &none          &none          &kp PAUSE_BREAK   &kp INS                                                                               &kp CAPS     &kp KP_NUM     &kp SLCK        &none           &none        &none
-                &none          &kp MINUS         &kp LS(RBKT)   &kp N2         &kp N5            &none                                                                                 &none        &kp EQUAL      &kp LS(EQUAL)   &kp N9          &kp RA(N9)   &none
-                &kp PSCRN      &kp RA(N3)        &kp RA(N4)     &kp N3         &kp N4            &kp LS(G)                                                                             &none        &kp N7         &kp N8          &kp RA(N7)      &kp RA(N8)   &none
-                &none          &kp LS(GRAVE)     &kp GRAVE      &kp LS(O)      &kp LS(V)         &none       &trans   &trans   &kp LCTRL         &kp K_APP   &trans         &trans     &none        &kp N6         &kp O           &kp RA(O)       &kp N0       &none
-                &trans         &kp LG(LEFT)      &kp LG(UP)     &kp LG(DOWN)   &kp LG(RIGHT)                 &trans   &trans   &trans            &trans      &kp RA(SPACE)  &trans                  &kp LG(HOME)   &kp LG(PG_UP)   &kp LG(PG_DN)   &kp LG(END)  &none
+                &kp C_BRI_DN   &kp C_BRI_UP             &kp C_PREV                &kp C_NEXT           &kp C_PP                                                                                                         &kp C_MUTE   &kp C_VOL_DN          &kp C_VOL_UP             &kp F11                &kp F12
+                &none          &tog LAYER_Game          &none                     &none                &kp PAUSE_BREAK     &kp INS                                                                                      &kp CAPS     &kp KP_NUM            &kp SLCK                 &none                  &none                    &none
+                &none          &kp EYOB_AT              &kp LS(EYOB_circumflex)   &kp EYOB_EQUAL_N2    &kp EYOB_MINUS_N5   &none                                                                                        &none        &kp EYOB_ampersand    &kp LS(EYOB_ampersand)   &kp EYOB_SLASH_N9      &kp RA(EYOB_SLASH_N9)    &none
+                &kp PSCRN      &kp RA(EYOB_LBRACE_N3)   &kp RA(EYOB_LPAR_N4)      &kp EYOB_LBRACE_N3   &kp EYOB_LPAR_N4    &kp LS(EYOB_comma)                                                                           &none        &kp EYOB_RPAR_N7      &kp EYOB_RBRACE_N8       &kp RA(EYOB_RPAR_N7)   &kp RA(EYOB_RBRACE_N8)   none
+                &none          &kp LS(EYOB_DOLLAR)      &kp EYOB_DOLLAR           &kp LS(EYOB_quote)   &kp LS(EYOB_dot)    &none                &trans   &trans   &kp LCTRL         &kp K_APP   &trans         &trans   &none        &kp EYOB_DBQUOTE_N6   &kp EYOB_quote           &kp RA(EYOB_quote)     &kp EYOB_STAR_N0         &none
+                &trans         &kp LG(LEFT)             &kp LG(UP)                &kp LG(DOWN)         &kp LG(RIGHT)                            &trans   &trans   &trans            &trans      &kp RA(SPACE)  &trans                &kp LG(HOME)          &kp LG(PG_UP)            &kp LG(PG_DN)          kp LG(END)               &none
             >;
         };
 
@@ -345,7 +345,7 @@
                 &none    &none            &none            &none            &none            &none                                                              &trans    &trans   &trans   &trans   &trans   &trans
                 &none    &none            &kp LC(EYOB_Z)   &none            &none            &none                                                              &trans    &trans   &trans   &trans   &trans   &trans
                 &none    &kp LC(EYOB_A)   &kp LC(EYOB_S)   &none            &kp LC(EYOB_T)   &none                                                              &trans    &trans   &trans   &trans   &trans   &trans
-                &none    &kp LC(EYOB_W)   &kp LC(SQT)      &kp LC(EYOB_C)   &kp LC(EYOB_V)   &none   &trans  &trans  &trans          &trans   &trans   &trans   &trans    &trans   &trans   &trans   &trans   &trans
+                &none    &kp LC(EYOB_W)   &kp LC(EYOB_X)   &kp LC(EYOB_C)   &kp LC(EYOB_V)   &none   &trans  &trans  &trans          &trans   &trans   &trans   &trans    &trans   &trans   &trans   &trans   &trans
                 &trans   &trans           &trans           &trans           &trans                   &trans  &trans  &trans          &trans   &trans   &trans             &trans   &trans   &trans   &trans   &trans
             >;
         };
