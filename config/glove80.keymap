@@ -195,6 +195,7 @@
             #binding-cells = <0>;
             bindings = <&kp LSHFT>, <&kp LC(LSHFT)>;
             mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
         };
 
         lamctrl: left_alt_maintain_ctrl {
@@ -202,6 +203,7 @@
             #binding-cells = <0>;
             bindings = <&kp LALT>, <&kp LC(LALT)>;
             mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
         };
 
         mtla: mod_tap_left_alt_maintain_ctrl {
