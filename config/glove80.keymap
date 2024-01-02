@@ -184,7 +184,7 @@
 
         sktap: sticky_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_TAP_HOLD";
+            label = "STICKY_TAP";
             bindings = <&kp>, <&sk>;
             #binding-cells = <2>;
             tapping-term-ms = <150>;
@@ -206,7 +206,7 @@
 
         mtla: mod_tap_left_alt_maintain_ctrl {
             compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_TAP_HOLD";
+            label = "MOD_TAP_LEFT_ALT";
             bindings = <&lamctrl>, <&kp>;
             #binding-cells = <2>;
             tapping-term-ms = <150>;
