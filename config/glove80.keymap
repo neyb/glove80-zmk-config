@@ -1,5 +1,7 @@
 #include <behaviors.dtsi>
 
+#define NONE 0
+
 /* includes */
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/keys.h>
@@ -179,6 +181,37 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        skhold: sticky_hold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAP_HOLD";
+            bindings = <&kp>, <&sk>;
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+        }
+
+        lsmctrl: left_shift_maintain_ctrl {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LSHFT>, <&kp LC(LSHFT)>;
+            mods = <(MOD_LCTL)>;
+        };
+
+        lamctrl: left_alt_maintain_ctrl {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LALT>, <&kp LC(LALT)>;
+            mods = <(MOD_LCTL)>;
+        };
+
+        mtla: mod_tap_left_alt_maintain_ctrl {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAP_HOLD";
+            bindings = <&lamctrl>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+        }
+
     };
 };
 
@@ -294,12 +327,12 @@
 
         layer_Base {
             bindings = <
-                &kp F1                 &kp F2            &kp F3              &kp F4               &kp F5                                                                                                                                                                             &kp F6             &kp F7               &kp F8              &kp F9             &kp F10
-                &kp EYOB_DOLLAR        &kp EYOB_PLUS_N1  &kp EYOB_EQUAL_N2   &kp EYOB_LBRACE_N3   &kp EYOB_LPAR_N4   &kp EYOB_MINUS_N5                                                                                                                         &kp EYOB_DBQUOTE_N6   &kp EYOB_RPAR_N7   &kp EYOB_RBRACE_N8   &kp EYOB_SLASH_N9   &kp EYOB_STAR_N0   &kp EYOB_AT
-                &kp TAB                &kp EYOB_EACUTE   &kp EYOB_Y          &kp EYOB_O           &kp EYOB_B         &kp EYOB_W                                                                                                                                &kp EYOB_F            &kp EYOB_D         &kp EYOB_L           &kp EYOB_quote      &kp EYOB_V         &kp EYOB_Z
-                &kp ESC                &kp EYOB_A        &kp EYOB_I          &kp EYOB_E           &kp EYOB_U         &kp EYOB_comma                                                                                                                            &kp EYOB_P            &kp EYOB_S         &kp EYOB_T           &kp EYOB_R          &kp EYOB_N         &kp EYOB_X
-                &kp EQUAL              &kp EYOB_AGRAVE   &kp EYOB_J          &kp EYOB_EGRAVE      &kp EYOB_dot       &kp EYOB_K       &kp LSHFT   &lthold LAYER_Symbol LGUI   &mt LGUI DEL                    &mo LAYER_Num         &mt RALT DEL   &kp BSPC    &kp EYOB_G            &kp EYOB_C         &kp EYOB_M           &kp EYOB_H          &kp EYOB_Q         &kp EYOB_circumflex
-                &magic LAYER_Magic 0   &kp LEFT          &kp UP              &kp DOWN             &kp RIGHT                           &kp LCTRL   &mt LALT SPACE             &lthold LAYER_Mouse ENTER        &mt RALT RA(SPACE)    &kp RET        &kp SPACE                         &kp HOME           &kp PG_UP            &kp PG_DN           &kp END            &kp EYOB_ccedilla
+                &kp F1                 &kp F2            &kp F3              &kp F4               &kp F5                                                                                                                                                                                                &kp F6             &kp F7               &kp F8              &kp F9             &kp F10
+                &kp EYOB_DOLLAR        &kp EYOB_PLUS_N1  &kp EYOB_EQUAL_N2   &kp EYOB_LBRACE_N3   &kp EYOB_LPAR_N4   &kp EYOB_MINUS_N5                                                                                                                                   &kp EYOB_DBQUOTE_N6   &kp EYOB_RPAR_N7   &kp EYOB_RBRACE_N8   &kp EYOB_SLASH_N9   &kp EYOB_STAR_N0   &kp EYOB_AT
+                &kp TAB                &kp EYOB_EACUTE   &kp EYOB_Y          &kp EYOB_O           &kp EYOB_B         &kp EYOB_W                                                                                                                                          &kp EYOB_F            &kp EYOB_D         &kp EYOB_L           &kp EYOB_quote      &kp EYOB_V         &kp EYOB_Z
+                &kp ESC                &kp EYOB_A        &kp EYOB_I          &kp EYOB_E           &kp EYOB_U         &kp EYOB_comma                                                                                                                                      &kp EYOB_P            &kp EYOB_S         &kp EYOB_T           &kp EYOB_R          &kp EYOB_N         &kp EYOB_X
+                &kp EQUAL              &kp EYOB_AGRAVE   &kp EYOB_J          &kp EYOB_EGRAVE      &kp EYOB_dot       &kp EYOB_K       &lsmctrl              &lthold LAYER_Symbol LGUI   &mt LGUI DEL                    &mo LAYER_Num         &mt RALT DEL   &kp BSPC    &kp EYOB_G            &kp EYOB_C         &kp EYOB_M           &kp EYOB_H          &kp EYOB_Q         &kp EYOB_circumflex
+                &magic LAYER_Magic 0   &kp LEFT          &kp UP              &kp DOWN             &kp RIGHT                           &skhold LCTRL LCTRL   &mtla NONE SPACE            &lthold LAYER_Mouse ENTER        &mt RALT RA(SPACE)    &kp RET        &kp SPACE                         &kp HOME           &kp PG_UP            &kp PG_DN           &kp END            &kp EYOB_ccedilla
             >;
         };
 
